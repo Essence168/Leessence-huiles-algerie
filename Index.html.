@@ -1,0 +1,236 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f8f5ed">
+  <meta name="description" content="L'ESSENCE — HUILES D'ALGÉRIE. Descubre nuestra selección de aceites naturales de Argelia.">
+  <title>L'ESSENCE — HUILES D'ALGÉRIE</title>
+  <style>
+    :root {
+      --turquoise: #168f8b;
+      --dark: #075f60;
+      --ivory: #fcfaf4;
+      --gold: #bda46a;
+      --text: #343b38;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--ivory);
+      color: var(--text);
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.7;
+    }
+    header {
+      text-align: center;
+      padding: 24px 18px 18px;
+      border-bottom: 1px solid #e7deca;
+    }
+    .logo {
+      display: block;
+      width: min(100%, 340px);
+      max-height: 220px;
+      object-fit: contain;
+      margin: 0 auto;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 25px;
+      padding: 15px;
+      font-size: 13px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+    nav a, .button { text-decoration: none; }
+    nav a { color: var(--dark); }
+    .hero {
+      text-align: center;
+      padding: 85px 22px 95px;
+      background: linear-gradient(180deg, #f4f0e5, var(--ivory));
+    }
+    .eyebrow {
+      color: var(--turquoise);
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      font-size: 11px;
+    }
+    h1 {
+      color: var(--dark);
+      font-size: clamp(35px, 7vw, 65px);
+      font-weight: normal;
+      line-height: 1.15;
+      margin: 20px auto;
+    }
+    h2 {
+      color: var(--dark);
+      font-size: 32px;
+      font-weight: normal;
+    }
+    .hero p {
+      max-width: 560px;
+      margin: 20px auto 30px;
+      font-size: 17px;
+    }
+    .button {
+      display: inline-block;
+      padding: 12px 25px;
+      background: var(--turquoise);
+      color: white;
+      letter-spacing: 1px;
+      font-size: 12px;
+      text-transform: uppercase;
+    }
+    section {
+      max-width: 1050px;
+      margin: auto;
+      padding: 65px 22px;
+      text-align: center;
+    }
+    .gold-line {
+      width: 65px;
+      height: 1px;
+      background: var(--gold);
+      margin: 20px auto;
+    }
+    .intro {
+      max-width: 690px;
+      margin: auto;
+    }
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 22px;
+      margin-top: 35px;
+    }
+    .product {
+      padding: 30px 20px;
+      border: 1px solid #e6ddca;
+      background: #fffdf8;
+    }
+    .product h3 {
+      color: var(--dark);
+      font-weight: normal;
+      font-size: 21px;
+    }
+    .product p { font-size: 14px; }
+    .note {
+      color: #77756d;
+      font-size: 12px;
+    }
+    .contact {
+      background: #edf4ef;
+      max-width: none;
+    }
+    .contact-inner {
+      max-width: 700px;
+      margin: auto;
+    }
+    footer {
+      text-align: center;
+      padding: 25px 15px;
+      color: #77756d;
+      font-size: 12px;
+      border-top: 1px solid #e7deca;
+    }
+    @media (max-width: 480px) {
+      nav { gap: 14px; }
+      .hero { padding: 60px 18px; }
+      section { padding: 48px 18px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img
+      class="logo"
+      src="667f53a6-9938-4c03-ba45-d70cae8f0169.jpeg"
+      alt="Logo original de L'ESSENCE — HUILES D'ALGÉRIE">
+  </header>
+
+  <nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#marca">Nuestra esencia</a>
+    <a href="#productos">Aceites</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+
+  <main>
+    <div class="hero" id="inicio">
+      <div class="eyebrow">El alma natural de Argelia</div>
+      <h1>La esencia de la naturaleza</h1>
+      <div class="gold-line"></div>
+      <p>
+        Descubre L'ESSENCE, una marca inspirada en la riqueza natural
+        de Argelia y en la belleza de sus aceites.
+      </p>
+      <a class="button" href="#productos">Descubrir la colección</a>
+    </div>
+
+    <section id="marca">
+      <div class="eyebrow">Nuestra historia</div>
+      <h2>HUILES D'ALGÉRIE</h2>
+      <div class="gold-line"></div>
+      <p class="intro">
+        Una selección de aceites naturales de Argelia presentada
+        con elegancia, sencillez y respeto por su origen.
+        Queremos acercarte la esencia de nuestra tierra.
+      </p>
+    </section>
+
+    <section id="productos">
+      <div class="eyebrow">Nuestra selección</div>
+      <h2>Nuestros aceites</h2>
+      <div class="gold-line"></div>
+      <p>Próximamente descubrirás aquí nuestra colección.</p>
+
+      <div class="products">
+        <article class="product">
+          <h3>Aceite natural</h3>
+          <p>Próximamente más información sobre este producto.</p>
+        </article>
+        <article class="product">
+          <h3>Esencia de Argelia</h3>
+          <p>Próximamente más información sobre este producto.</p>
+        </article>
+        <article class="product">
+          <h3>Nuestra colección</h3>
+          <p>Estamos preparando todos los detalles para ti.</p>
+        </article>
+      </div>
+      <p class="note">
+        La información y los productos se actualizarán cuando
+        la colección esté preparada.
+      </p>
+    </section>
+
+    <section class="contact" id="contacto">
+      <div class="contact-inner">
+        <div class="eyebrow">Estamos aquí</div>
+        <h2>Contacta con nosotros</h2>
+        <div class="gold-line"></div>
+        <p>
+          ¿Quieres conocer nuestra colección?
+          Escríbenos para recibir más información.
+        </p>
+        <p class="note">
+          El contacto estará disponible cuando configuremos
+          el correo de la marca.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    L'ESSENCE — HUILES D'ALGÉRIE
+    <br>
+    La esencia natural de Argelia.
+  </footer>
+
+</body>
+</html>
