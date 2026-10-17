@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#fcfaf4">
-  <meta name="description" content="Descubre BIO L’ESSENCE, una selección de aceites esenciales y productos naturales.">
+  <meta name="description" content="BIO L’ESSENCE: descubre nuestra selección de aceites y productos naturales.">
   <title>BIO L’ESSENCE | Huiles Essentielles</title>
 
   <style>
@@ -26,7 +26,7 @@
 
     html {
       scroll-behavior: smooth;
-      scroll-padding-top: 90px;
+      scroll-padding-top: 130px;
     }
 
     body {
@@ -37,42 +37,38 @@
     }
 
     a {
-      color: inherit;
       text-decoration: none;
     }
 
-    button, a {
-      -webkit-tap-highlight-color: transparent;
-    }
-
-    .barra-superior {
-      background: var(--marfil);
-      border-bottom: 1px solid rgba(189, 164, 106, 0.45);
+    header {
       position: sticky;
       top: 0;
       z-index: 100;
+      background: rgba(252, 250, 244, 0.98);
+      border-bottom: 1px solid rgba(189, 164, 106, 0.5);
+      box-shadow: 0 3px 14px rgba(0, 0, 0, 0.04);
     }
 
     .cabecera {
-      max-width: 1180px;
+      max-width: 1250px;
       margin: auto;
-      padding: 12px 22px;
+      padding: 13px 24px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 18px;
+      gap: 20px;
     }
 
     .marca {
       display: flex;
       align-items: center;
-      gap: 11px;
-      min-width: 0;
+      gap: 12px;
+      flex-shrink: 0;
     }
 
     .logo {
-      width: 57px;
-      height: 57px;
+      width: 68px;
+      height: 68px;
       object-fit: contain;
       border-radius: 50%;
       flex-shrink: 0;
@@ -81,339 +77,261 @@
     .nombre-marca {
       color: var(--turquesa-oscuro);
       font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(15px, 2.5vw, 22px);
+      font-size: 24px;
       letter-spacing: 1.5px;
       line-height: 1.3;
-    }
-
-    .submarca {
-      color: var(--dorado);
-      font-size: 10px;
-      letter-spacing: 2px;
-    }
-
-    .zona-menu {
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
-      gap: 17px;
-    }
-
-    .menu {
-      display: flex;
-      align-items: center;
-      gap: 17px;
-    }
-
-    .menu a {
-      color: var(--turquesa-oscuro);
-      font-size: 13px;
       white-space: nowrap;
     }
 
-    .menu a:hover {
+    .submarca {
+      display: block;
+      color: var(--dorado);
+      font-size: 10px;
+      letter-spacing: 2.5px;
+      margin-top: 4px;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: var(--turquesa-oscuro);
+      font-size: 15px;
+      font-weight: 600;
+      white-space: nowrap;
+      transition: color 0.2s;
+    }
+
+    nav a:hover {
       color: var(--dorado);
     }
 
-    .iconos-contacto {
-      display: flex;
-      align-items: center;
-      gap: 9px;
-      flex-shrink: 0;
-    }
-
-    .icono-contacto {
-      width: 39px;
-      height: 39px;
-      border: 1px solid var(--dorado);
-      border-radius: 50%;
+    .icono-menu {
       display: inline-flex;
-      justify-content: center;
       align-items: center;
+      justify-content: center;
       color: var(--turquesa-oscuro);
-      transition: background 0.2s, transform 0.2s;
+      line-height: 1;
     }
 
-    .icono-contacto:hover {
-      background: #e9f3ef;
-      transform: translateY(-2px);
+    .icono-menu svg {
+      display: block;
+      width: 24px;
+      height: 24px;
     }
 
-    .icono-contacto.whatsapp {
-      color: #20a45a;
+    .icono-menu:hover {
+      color: var(--dorado);
     }
 
-    .icono-contacto svg {
-      width: 21px;
-      height: 21px;
-      fill: currentColor;
-    }
-
-    .hero {
-      min-height: 440px;
-      padding: 75px 22px;
+    .portada {
+      min-height: 470px;
+      padding: 85px 24px;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
       background:
-        radial-gradient(ellipse at top, #e7f5f1 0%, transparent 65%),
-        var(--marfil);
-      border-bottom: 1px solid rgba(189, 164, 106, 0.45);
+        radial-gradient(ellipse at top, rgba(114, 199, 192, 0.23), transparent 65%),
+        linear-gradient(135deg, #fcfaf4, #f5f0e3);
+      border-bottom: 1px solid rgba(189, 164, 106, 0.35);
     }
 
-    .hero-contenido {
+    .portada-contenido {
       max-width: 760px;
     }
 
     .etiqueta {
       color: var(--dorado);
-      letter-spacing: 4px;
       font-size: 12px;
+      letter-spacing: 4px;
       text-transform: uppercase;
-      margin-bottom: 15px;
+      margin-bottom: 18px;
     }
 
-    h1, h2, h3 {
+    h1 {
       font-family: Georgia, "Times New Roman", serif;
-      font-weight: normal;
-    }
-
-    .hero h1 {
       color: var(--turquesa-oscuro);
-      font-size: clamp(36px, 7vw, 62px);
+      font-size: clamp(36px, 6vw, 60px);
       line-height: 1.2;
-      letter-spacing: 2px;
-      margin-bottom: 17px;
+      font-weight: normal;
+      margin-bottom: 22px;
     }
 
-    .hero p {
-      max-width: 580px;
-      margin: 0 auto 27px;
-      color: #59615c;
+    .portada p {
+      max-width: 620px;
+      margin: 0 auto 30px;
       font-size: 17px;
     }
 
-    .boton-principal {
+    .boton {
       display: inline-block;
-      padding: 12px 25px;
+      padding: 13px 27px;
+      border: 1px solid var(--dorado);
+      border-radius: 3px;
       background: var(--turquesa-oscuro);
       color: var(--blanco);
-      border: 1px solid var(--turquesa-oscuro);
-      border-radius: 3px;
       font-size: 14px;
+      letter-spacing: 0.5px;
       transition: background 0.2s;
     }
 
-    .boton-principal:hover {
-      background: #286561;
+    .boton:hover {
+      background: #286763;
     }
 
-    .seccion {
-      max-width: 1100px;
+    .productos {
+      background: var(--blanco);
+      border-top: 1px solid rgba(189, 164, 106, 0.3);
+      border-bottom: 1px solid rgba(189, 164, 106, 0.3);
+    }
+
+    .productos-interior {
+      max-width: 1150px;
       margin: auto;
-      padding: 76px 22px;
+      padding: 75px 24px;
     }
 
     .titulo-seccion {
-      color: var(--turquesa-oscuro);
       text-align: center;
-      font-size: clamp(28px, 5vw, 40px);
-      margin-bottom: 12px;
+      margin-bottom: 40px;
     }
 
-    .texto-intro {
-      max-width: 650px;
-      margin: 0 auto 35px;
-      text-align: center;
-      color: #626963;
+    h2 {
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--turquesa-oscuro);
+      font-size: clamp(30px, 4vw, 40px);
+      font-weight: normal;
+      line-height: 1.3;
     }
 
     .linea-dorada {
-      width: 58px;
+      width: 65px;
       height: 2px;
       background: var(--dorado);
-      margin: 18px auto 25px;
+      margin: 18px auto 0;
     }
 
-    .esencia {
-      background: #f0f6f1;
-      max-width: none;
-    }
-
-    .esencia-interior {
-      max-width: 800px;
-      margin: auto;
+    .introduccion {
+      max-width: 700px;
+      margin: 0 auto 35px;
       text-align: center;
-    }
-
-    .esencia h2 {
-      color: var(--turquesa-oscuro);
-      font-size: 36px;
-      margin-bottom: 17px;
-    }
-
-    .esencia p {
-      color: #59615c;
+      font-size: 16px;
     }
 
     .rejilla-productos {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 23px;
-      margin-top: 35px;
+      gap: 25px;
     }
 
     .producto {
-      background: var(--blanco);
-      border: 1px solid #e8dfcc;
-      padding: 15px;
+      border: 1px solid #e9e1d0;
+      background: var(--marfil);
       text-align: center;
+      padding: 22px;
+      border-radius: 4px;
     }
 
-    .foto-pendiente {
-      min-height: 220px;
+    .foto-producto {
+      min-height: 190px;
       display: flex;
-      flex-direction: column;
       align-items: center;
       justify-content: center;
-      gap: 12px;
-      background: #edf5f0;
+      background: linear-gradient(145deg, #e7f4ef, #f7f0df);
+      border: 1px solid rgba(189, 164, 106, 0.3);
+      margin-bottom: 22px;
       color: var(--turquesa-oscuro);
-      margin-bottom: 18px;
-    }
-
-    .foto-pendiente svg {
-      width: 42px;
-      height: 42px;
-      fill: currentColor;
-    }
-
-    .foto-pendiente span {
-      font-size: 12px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 18px;
     }
 
     .producto h3 {
+      font-family: Georgia, "Times New Roman", serif;
       color: var(--turquesa-oscuro);
-      font-size: 22px;
-      margin-bottom: 8px;
+      font-size: 23px;
+      font-weight: normal;
+      margin-bottom: 10px;
     }
 
     .producto p {
       font-size: 14px;
-      color: #656b65;
+      margin-bottom: 16px;
     }
 
-    .precio-pendiente {
+    .precio {
       color: var(--dorado);
-      margin-top: 12px;
-      font-size: 14px;
-    }
-
-    .aviso-productos {
-      text-align: center;
-      color: #777;
-      font-size: 13px;
-      margin-top: 22px;
+      font-weight: bold;
     }
 
     .contacto {
-      background: #edf5f0;
-      border-top: 1px solid rgba(189, 164, 106, 0.45);
-      border-bottom: 1px solid rgba(189, 164, 106, 0.45);
-    }
-
-    .contacto-contenido {
-      max-width: 760px;
-      margin: auto;
       text-align: center;
-    }
-
-    .contacto h2 {
-      color: var(--turquesa-oscuro);
-      font-size: 38px;
-      margin-bottom: 12px;
+      padding: 75px 24px;
     }
 
     .contacto p {
-      color: #59615c;
-      margin-bottom: 25px;
+      margin: 18px auto 25px;
+      max-width: 600px;
     }
 
-    .contacto .iconos-contacto {
-      justify-content: center;
-      gap: 18px;
-    }
-
-    .contacto .icono-contacto {
-      width: 53px;
-      height: 53px;
-      background: var(--marfil);
-    }
-
-    .contacto .icono-contacto svg {
-      width: 26px;
-      height: 26px;
-    }
-
-    .texto-iconos {
+    .contacto-enlaces {
       display: flex;
       justify-content: center;
-      gap: 28px;
-      margin-top: 10px;
-      font-size: 12px;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .contacto-enlaces a {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
       color: var(--turquesa-oscuro);
+      border: 1px solid var(--dorado);
+      padding: 11px 18px;
+      border-radius: 3px;
+      overflow-wrap: anywhere;
+    }
+
+    .contacto-enlaces a:hover {
+      background: #e7f4ef;
+    }
+
+    .contacto-enlaces svg {
+      width: 21px;
+      height: 21px;
+      flex-shrink: 0;
     }
 
     footer {
       text-align: center;
-      padding: 27px 20px;
-      background: var(--marfil);
-    }
-
-    .pie-marca {
+      background: #edf6f2;
+      border-top: 1px solid rgba(189, 164, 106, 0.5);
+      padding: 25px 18px;
       color: var(--turquesa-oscuro);
+      font-size: 13px;
+    }
+
+    footer .nombre-pie {
       font-family: Georgia, "Times New Roman", serif;
+      font-size: 19px;
       letter-spacing: 2px;
-      font-size: 18px;
+      margin-bottom: 5px;
     }
 
-    .pie-submarca {
-      color: var(--dorado);
-      font-size: 10px;
-      letter-spacing: 3px;
-      margin-bottom: 12px;
-    }
-
-    footer p {
-      color: #777;
-      font-size: 12px;
-    }
-
-    @media (max-width: 900px) {
+    @media (max-width: 1000px) {
       .cabecera {
-        flex-wrap: wrap;
-        padding: 10px 15px;
-        gap: 10px;
+        flex-direction: column;
+        gap: 14px;
       }
 
-      .marca {
-        flex: 1;
-      }
-
-      .zona-menu {
-        width: 100%;
-        justify-content: space-between;
-        gap: 10px;
-      }
-
-      .menu {
-        gap: 13px;
-        flex-wrap: wrap;
-      }
-
-      .menu a {
-        font-size: 12px;
+      nav {
+        justify-content: center;
+        gap: 18px;
       }
 
       .rejilla-productos {
@@ -421,249 +339,223 @@
       }
     }
 
-    @media (max-width: 480px) {
+    @media (max-width: 520px) {
+      .cabecera {
+        padding: 12px 8px;
+        gap: 13px;
+      }
+
+      .marca {
+        gap: 9px;
+      }
+
       .logo {
-        width: 48px;
-        height: 48px;
+        width: 58px;
+        height: 58px;
       }
 
-      .zona-menu {
-        align-items: center;
+      .nombre-marca {
+        font-size: 22px;
+        letter-spacing: 1px;
       }
 
-      .menu {
-        gap: 10px;
+      .submarca {
+        font-size: 9px;
+        letter-spacing: 2px;
       }
 
-      .menu a {
-        font-size: 11px;
+      nav {
+        gap: 13px;
       }
 
-      .iconos-contacto {
-        gap: 6px;
+      nav a {
+        font-size: 14px;
       }
 
-      .icono-contacto {
-        width: 34px;
-        height: 34px;
+      .icono-menu svg {
+        width: 22px;
+        height: 22px;
       }
 
-      .icono-contacto svg {
-        width: 18px;
-        height: 18px;
-      }
-
-      .hero {
+      .portada {
         min-height: 390px;
-        padding: 55px 20px;
+        padding: 65px 20px;
       }
 
-      .hero p {
+      .portada p {
         font-size: 15px;
       }
 
-      .seccion {
-        padding: 55px 17px;
+      .productos-interior {
+        padding: 55px 16px;
       }
 
       .rejilla-productos {
         grid-template-columns: 1fr;
       }
 
-      .foto-pendiente {
-        min-height: 200px;
+      .foto-producto {
+        min-height: 170px;
+      }
+
+      .contacto {
+        padding: 55px 16px;
       }
     }
   </style>
 </head>
 
 <body>
-
-  <header class="barra-superior">
+  <header>
     <div class="cabecera">
-
-      <a class="marca" href="#inicio" aria-label="BIO L'ESSENCE, inicio">
+      <a class="marca" href="#inicio" aria-label="BIO L’ESSENCE, inicio">
         <img
           class="logo"
           src="f63d83a1-ae4c-4a46-b395-017e2b2022e6.jpeg"
-          alt="Logo BIO L'ESSENCE"
+          alt="Logo BIO L’ESSENCE"
         >
-        <span>
-          <span class="nombre-marca">BIO L’ESSENCE</span><br>
+        <span class="nombre-marca">
+          BIO L’ESSENCE
           <span class="submarca">HUILES ESSENTIELLES</span>
         </span>
       </a>
 
-      <div class="zona-menu">
-        <nav class="menu" aria-label="Menú principal">
-          <a href="#inicio">Inicio</a>
-          <a href="#esencia">Nuestra esencia</a>
-          <a href="#aceites">Nuestros aceites</a>
-          <a href="#contacto">Contacto</a>
-        </nav>
+      <nav aria-label="Navegación principal">
+        <a href="#inicio">Inicio</a>
+        <a href="#aceites">Nuestros aceites</a>
+        <a href="#contacto">Contacto</a>
 
-        <div class="iconos-contacto">
-          <a
-            class="icono-contacto whatsapp"
-            href="https://wa.me/34645527638"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Contactar por WhatsApp"
-            title="WhatsApp"
-          >
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.6 0 .3 5.3.3 11.8c0 2.1.5 4.1 1.6 5.9L.2 24l6.5-1.7a11.8 11.8 0 0 0 5.4 1.3h.1c6.5 0 11.8-5.3 11.8-11.8 0-3.1-1.2-6.1-3.5-8.3ZM12.1 21.6a9.8 9.8 0 0 1-5-1.4l-.4-.2-3.9 1 1-3.8-.2-.4a9.8 9.8 0 1 1 8.5 4.8Zm5.4-7.3c-.3-.1-1.6-.8-1.9-.9-.3-.1-.5-.1-.7.2-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.2-1.3-.8-.7-1.3-1.6-1.5-1.8-.2-.3 0-.4.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5s-.6-1.4-.9-1.9c-.2-.5-.5-.4-.7-.4h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.3s1 2.7 1.1 2.9c.1.2 2 3.1 4.8 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.6-.7 1.8-1.3.2-.6.2-1.2.2-1.3s-.2-.3-.5-.4Z"/>
-            </svg>
-          </a>
+        <a
+          class="icono-menu"
+          href="https://wa.me/34645527638"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Contactar por WhatsApp"
+          title="WhatsApp"
+        >
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.5 0 .2 5.3.2 11.9c0 2.1.6 4.1 1.6 5.9L0 24l6.4-1.7a12 12 0 0 0 5.7 1.4h.1c6.5 0 11.8-5.3 11.8-11.9 0-3.1-1.2-6.1-3.5-8.3ZM12.1 21.7c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.8 1 1-3.7-.2-.4a9.7 9.7 0 0 1-1.5-5.1 9.9 9.9 0 0 1 9.9-9.9c2.6 0 5.1 1 7 2.9a9.8 9.8 0 0 1 2.9 7 9.9 9.9 0 0 1-9.9 9.8Zm5.4-7.4c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.7.2-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.2-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.2-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.8 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3Z"/>
+          </svg>
+        </a>
 
-          <a
-            class="icono-contacto"
-            href="mailto:leessenceargerie@gmail.com"
-            aria-label="Enviar correo electrónico"
-            title="Correo electrónico"
-          >
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M2 4h20a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Zm10 9L3 7v11h18V7Zm0-2 8-5H4Z"/>
-            </svg>
-          </a>
-        </div>
-      </div>
-
+        <a
+          class="icono-menu"
+          href="mailto:leessenceargerie@gmail.com"
+          aria-label="Enviar correo electrónico"
+          title="Correo electrónico"
+        >
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+               stroke-width="1.7" aria-hidden="true">
+            <rect x="2.5" y="4.5" width="19" height="15" rx="2"/>
+            <path d="m3 6 9 7 9-7"/>
+          </svg>
+        </a>
+      </nav>
     </div>
   </header>
 
   <main>
-    <section class="hero" id="inicio">
-      <div class="hero-contenido">
-        <p class="etiqueta">Nature · Pureté · Essence</p>
+    <section class="portada" id="inicio">
+      <div class="portada-contenido">
+        <p class="etiqueta">La esencia de la naturaleza</p>
         <h1>La naturaleza en cada gota</h1>
         <p>
-          Descubre el universo de BIO L’ESSENCE y déjate acompañar
-          por la esencia de la naturaleza.
+          Descubre BIO L’ESSENCE y nuestra selección de aceites
+          y productos naturales para acompañarte en tus rutinas
+          de cuidado y bienestar.
         </p>
-        <a class="boton-principal" href="#aceites">
-          Descubre nuestros aceites
-        </a>
+        <a class="boton" href="#aceites">Descubre nuestros aceites</a>
       </div>
     </section>
 
-    <section class="seccion esencia" id="esencia">
-      <div class="esencia-interior">
-        <p class="etiqueta">Notre philosophie</p>
-        <h2>Nuestra esencia</h2>
-        <div class="linea-dorada"></div>
-        <p>
-          En BIO L’ESSENCE creemos en la belleza de lo natural.
-          Queremos acercarte una selección de aceites y esencias
-          para que descubras sus aromas y encuentres tus favoritos.
+    <section class="productos" id="aceites">
+      <div class="productos-interior">
+        <div class="titulo-seccion">
+          <p class="etiqueta">Notre sélection</p>
+          <h2>Nuestros aceites</h2>
+          <div class="linea-dorada"></div>
+        </div>
+
+        <p class="introduccion">
+          Descubre nuestra selección de aceites naturales.
+          Próximamente encontrarás las fotografías, características,
+          formatos y precios de cada producto.
         </p>
+
+        <div class="rejilla-productos">
+          <article class="producto">
+            <div class="foto-producto">Tu aceite aquí</div>
+            <h3>Aceite natural</h3>
+            <p>
+              Aquí añadiremos la descripción, la composición
+              y las indicaciones de uso del producto.
+            </p>
+            <p class="precio">Precio por definir</p>
+          </article>
+
+          <article class="producto">
+            <div class="foto-producto">Tu aceite aquí</div>
+            <h3>Aceite natural</h3>
+            <p>
+              Aquí añadiremos la descripción, la composición
+              y las indicaciones de uso del producto.
+            </p>
+            <p class="precio">Precio por definir</p>
+          </article>
+
+          <article class="producto">
+            <div class="foto-producto">Tu aceite aquí</div>
+            <h3>Aceite natural</h3>
+            <p>
+              Aquí añadiremos la descripción, la composición
+              y las indicaciones de uso del producto.
+            </p>
+            <p class="precio">Precio por definir</p>
+          </article>
+        </div>
       </div>
     </section>
 
-    <section class="seccion" id="aceites">
-      <p class="etiqueta" style="text-align:center;">Notre collection</p>
-      <h2 class="titulo-seccion">Nuestros aceites</h2>
-      <div class="linea-dorada"></div>
-      <p class="texto-intro">
-        Explora nuestra colección. Pronto encontrarás aquí las
-        fotografías, los tamaños, las descripciones y los precios
-        de nuestros productos.
-      </p>
-
-      <div class="rejilla-productos">
-
-        <article class="producto">
-          <div class="foto-pendiente">
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M12 2C9 7 4 11 4 16a8 8 0 0 0 16 0c0-5-5-9-8-14Zm0 18a4 4 0 0 1-4-4c0-1.8 1.3-3.7 2.5-5.2-.2 2.2.8 3.1 1.8 3.7 1.2.8 1.7 1.6 1.7 2.7a2 2 0 0 1-2 2.8Z"/>
-            </svg>
-            <span>Fotografía próximamente</span>
-          </div>
-          <h3>Próximamente</h3>
-          <p>Estamos preparando los detalles de este producto.</p>
-          <div class="precio-pendiente">Precio por definir</div>
-        </article>
-
-        <article class="producto">
-          <div class="foto-pendiente">
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M12 22c-4 0-7-3-7-7 0-5 7-13 7-13s7 8 7 13c0 4-3 7-7 7Zm0-3a4 4 0 0 0 4-4c0-1.5-1-3.5-2.5-5.5.3 2.5-.8 3.5-2 4.2-1 .7-1.5 1.5-1.5 2.5a2.5 2.5 0 0 0 2 2.8Z"/>
-            </svg>
-            <span>Fotografía próximamente</span>
-          </div>
-          <h3>Próximamente</h3>
-          <p>Descubre pronto otro producto de nuestra colección.</p>
-          <div class="precio-pendiente">Precio por definir</div>
-        </article>
-
-        <article class="producto">
-          <div class="foto-pendiente">
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M12 2 9 7H6v4c-2 2-3 4-3 6a9 9 0 0 0 18 0c0-2-1-4-3-6V7h-3Zm-3 8h6v2c2 1.5 3 3 3 5a6 6 0 0 1-12 0c0-2 1-3.5 3-5Z"/>
-            </svg>
-            <span>Fotografía próximamente</span>
-          </div>
-          <h3>Próximamente</h3>
-          <p>Muy pronto podrás conocer todos los detalles.</p>
-          <div class="precio-pendiente">Precio por definir</div>
-        </article>
-
-      </div>
-
-      <p class="aviso-productos">
-        Colección en preparación. Los productos y sus precios se añadirán próximamente.
-      </p>
-    </section>
-
-    <section class="seccion contacto" id="contacto">
-      <div class="contacto-contenido">
+    <section class="contacto" id="contacto">
+      <div class="titulo-seccion">
         <p class="etiqueta">Nous contacter</p>
-        <h2>Estamos aquí para ti</h2>
+        <h2>Contacto</h2>
         <div class="linea-dorada"></div>
-        <p>
-          ¿Tienes alguna pregunta? Escríbenos y estaremos encantados
-          de atenderte.
-        </p>
+      </div>
 
-        <div class="iconos-contacto">
-          <a
-            class="icono-contacto whatsapp"
-            href="https://wa.me/34645527638"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Contactar por WhatsApp"
-            title="WhatsApp"
-          >
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.6 0 .3 5.3.3 11.8c0 2.1.5 4.1 1.6 5.9L.2 24l6.5-1.7a11.8 11.8 0 0 0 5.4 1.3h.1c6.5 0 11.8-5.3 11.8-11.8 0-3.1-1.2-6.1-3.5-8.3ZM12.1 21.6a9.8 9.8 0 0 1-5-1.4l-.4-.2-3.9 1 1-3.8-.2-.4a9.8 9.8 0 1 1 8.5 4.8Zm5.4-7.3c-.3-.1-1.6-.8-1.9-.9-.3-.1-.5-.1-.7.2-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.2-1.3-.8-.7-1.3-1.6-1.5-1.8-.2-.3 0-.4.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5s-.6-1.4-.9-1.9c-.2-.5-.5-.4-.7-.4h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.3s1 2.7 1.1 2.9c.1.2 2 3.1 4.8 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.6-.7 1.8-1.3.2-.6.2-1.2.2-1.3s-.2-.3-.5-.4Z"/>
-            </svg>
-          </a>
+      <p>
+        ¿Quieres conocer nuestros productos?
+        Escríbenos y estaremos encantados de atenderte.
+      </p>
 
-          <a
-            class="icono-contacto"
-            href="mailto:leessenceargerie@gmail.com"
-            aria-label="Enviar correo electrónico"
-            title="Correo electrónico"
-          >
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M2 4h20a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Zm10 9L3 7v11h18V7Zm0-2 8-5H4Z"/>
-            </svg>
-          </a>
-        </div>
+      <div class="contacto-enlaces">
+        <a
+          href="https://wa.me/34645527638"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.5 0 .2 5.3.2 11.9c0 2.1.6 4.1 1.6 5.9L0 24l6.4-1.7a12 12 0 0 0 5.7 1.4h.1c6.5 0 11.8-5.3 11.8-11.9 0-3.1-1.2-6.1-3.5-8.3ZM12.1 21.7c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.8 1 1-3.7-.2-.4a9.7 9.7 0 0 1-1.5-5.1 9.9 9.9 0 0 1 9.9-9.9c2.6 0 5.1 1 7 2.9a9.8 9.8 0 0 1 2.9 7 9.9 9.9 0 0 1-9.9 9.8Z"/>
+          </svg>
+          WhatsApp
+        </a>
 
-        <div class="texto-iconos">
-          <span>WhatsApp</span>
-          <span>Correo electrónico</span>
-        </div>
+        <a href="mailto:leessenceargerie@gmail.com">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+               stroke-width="1.7" aria-hidden="true">
+            <rect x="2.5" y="4.5" width="19" height="15" rx="2"/>
+            <path d="m3 6 9 7 9-7"/>
+          </svg>
+          Correo electrónico
+        </a>
       </div>
     </section>
   </main>
 
   <footer>
-    <div class="pie-marca">BIO L’ESSENCE</div>
-    <div class="pie-submarca">HUILES ESSENTIELLES</div>
+    <div class="nombre-pie">BIO L’ESSENCE</div>
+    <p>Huiles Essentielles</p>
     <p>© 2026 BIO L’ESSENCE. Todos los derechos reservados.</p>
   </footer>
-
 </body>
 </html>
