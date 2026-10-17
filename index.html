@@ -4,7 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="BIO L’ESSENCE: descubre nuestra selección de aceites esenciales.">
+  <meta name="theme-color" content="#fcfaf4">
+  <meta name="description" content="Descubre BIO L’ESSENCE, una selección de aceites esenciales y productos naturales.">
   <title>BIO L’ESSENCE | Huiles Essentielles</title>
 
   <style>
@@ -19,247 +20,650 @@
 
     * {
       box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
     html {
       scroll-behavior: smooth;
+      scroll-padding-top: 90px;
     }
 
     body {
-      margin: 0;
-      font-family: Georgia, "Times New Roman", serif;
+      font-family: Arial, Helvetica, sans-serif;
       background: var(--marfil);
       color: var(--texto);
       line-height: 1.7;
     }
 
-    header {
-      text-align: center;
-      padding: 28px 16px 22px;
-      background: var(--blanco);
-      border-bottom: 1px solid var(--dorado);
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button, a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .barra-superior {
+      background: var(--marfil);
+      border-bottom: 1px solid rgba(189, 164, 106, 0.45);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .cabecera {
+      max-width: 1180px;
+      margin: auto;
+      padding: 12px 22px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .marca {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      min-width: 0;
     }
 
     .logo {
-      display: block;
-      width: min(240px, 80%);
-      max-height: 190px;
+      width: 57px;
+      height: 57px;
       object-fit: contain;
-      margin: 0 auto 12px;
+      border-radius: 50%;
+      flex-shrink: 0;
     }
 
-    .brand {
-      margin: 0;
+    .nombre-marca {
       color: var(--turquesa-oscuro);
-      font-size: clamp(27px, 6vw, 38px);
-      letter-spacing: 4px;
-      font-weight: normal;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(15px, 2.5vw, 22px);
+      letter-spacing: 1.5px;
+      line-height: 1.3;
     }
 
-    .tagline {
-      margin: 5px 0 0;
+    .submarca {
       color: var(--dorado);
-      letter-spacing: 3px;
-      font-size: 13px;
+      font-size: 10px;
+      letter-spacing: 2px;
     }
 
-    nav {
+    .zona-menu {
       display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 17px;
+    }
+
+    .menu {
+      display: flex;
+      align-items: center;
+      gap: 17px;
+    }
+
+    .menu a {
+      color: var(--turquesa-oscuro);
+      font-size: 13px;
+      white-space: nowrap;
+    }
+
+    .menu a:hover {
+      color: var(--dorado);
+    }
+
+    .iconos-contacto {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      flex-shrink: 0;
+    }
+
+    .icono-contacto {
+      width: 39px;
+      height: 39px;
+      border: 1px solid var(--dorado);
+      border-radius: 50%;
+      display: inline-flex;
       justify-content: center;
-      flex-wrap: wrap;
-      gap: 22px;
-      padding: 14px;
-      background: var(--turquesa);
+      align-items: center;
+      color: var(--turquesa-oscuro);
+      transition: background 0.2s, transform 0.2s;
     }
 
-    nav a {
-      color: #244d4a;
-      text-decoration: none;
-      font-size: 14px;
+    .icono-contacto:hover {
+      background: #e9f3ef;
+      transform: translateY(-2px);
     }
 
-    nav a:hover {
-      color: var(--blanco);
+    .icono-contacto.whatsapp {
+      color: #20a45a;
+    }
+
+    .icono-contacto svg {
+      width: 21px;
+      height: 21px;
+      fill: currentColor;
     }
 
     .hero {
+      min-height: 440px;
+      padding: 75px 22px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       text-align: center;
-      padding: 78px 20px;
-      background: linear-gradient(135deg, #e6f5f1, #fcfaf4);
-      border-bottom: 1px solid #e6d8b5;
+      background:
+        radial-gradient(ellipse at top, #e7f5f1 0%, transparent 65%),
+        var(--marfil);
+      border-bottom: 1px solid rgba(189, 164, 106, 0.45);
     }
 
-    .hero h2 {
-      color: var(--turquesa-oscuro);
-      font-size: clamp(30px, 6vw, 48px);
-      font-weight: normal;
-      line-height: 1.2;
-      margin: 0 auto 18px;
+    .hero-contenido {
       max-width: 760px;
+    }
+
+    .etiqueta {
+      color: var(--dorado);
+      letter-spacing: 4px;
+      font-size: 12px;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+    }
+
+    h1, h2, h3 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: normal;
+    }
+
+    .hero h1 {
+      color: var(--turquesa-oscuro);
+      font-size: clamp(36px, 7vw, 62px);
+      line-height: 1.2;
+      letter-spacing: 2px;
+      margin-bottom: 17px;
     }
 
     .hero p {
-      max-width: 620px;
-      margin: 0 auto 26px;
+      max-width: 580px;
+      margin: 0 auto 27px;
+      color: #59615c;
+      font-size: 17px;
     }
 
-    .button {
+    .boton-principal {
       display: inline-block;
       padding: 12px 25px;
-      background: var(--turquesa);
-      color: #244d4a;
-      text-decoration: none;
-      border: 1px solid var(--dorado);
-      letter-spacing: 1px;
+      background: var(--turquesa-oscuro);
+      color: var(--blanco);
+      border: 1px solid var(--turquesa-oscuro);
+      border-radius: 3px;
+      font-size: 14px;
+      transition: background 0.2s;
     }
 
-    section {
-      padding: 55px 20px;
+    .boton-principal:hover {
+      background: #286561;
+    }
+
+    .seccion {
+      max-width: 1100px;
+      margin: auto;
+      padding: 76px 22px;
+    }
+
+    .titulo-seccion {
+      color: var(--turquesa-oscuro);
+      text-align: center;
+      font-size: clamp(28px, 5vw, 40px);
+      margin-bottom: 12px;
+    }
+
+    .texto-intro {
+      max-width: 650px;
+      margin: 0 auto 35px;
+      text-align: center;
+      color: #626963;
+    }
+
+    .linea-dorada {
+      width: 58px;
+      height: 2px;
+      background: var(--dorado);
+      margin: 18px auto 25px;
+    }
+
+    .esencia {
+      background: #f0f6f1;
+      max-width: none;
+    }
+
+    .esencia-interior {
+      max-width: 800px;
+      margin: auto;
       text-align: center;
     }
 
-    section h2 {
+    .esencia h2 {
       color: var(--turquesa-oscuro);
-      font-size: 30px;
-      font-weight: normal;
-      margin: 0 0 18px;
+      font-size: 36px;
+      margin-bottom: 17px;
     }
 
-    .intro {
-      max-width: 760px;
-      margin: 0 auto;
+    .esencia p {
+      color: #59615c;
     }
 
-    .products {
+    .rejilla-productos {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 22px;
-      max-width: 1000px;
-      margin: 30px auto 0;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 23px;
+      margin-top: 35px;
     }
 
-    .product {
+    .producto {
       background: var(--blanco);
-      padding: 28px 20px;
-      border: 1px solid #e2d5b5;
+      border: 1px solid #e8dfcc;
+      padding: 15px;
+      text-align: center;
     }
 
-    .symbol {
-      font-size: 34px;
-      color: var(--dorado);
-    }
-
-    .product h3 {
+    .foto-pendiente {
+      min-height: 220px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      background: #edf5f0;
       color: var(--turquesa-oscuro);
-      font-size: 21px;
-      font-weight: normal;
+      margin-bottom: 18px;
     }
 
-    .contact {
-      background: #eaf5f1;
-      border-top: 1px solid var(--dorado);
+    .foto-pendiente svg {
+      width: 42px;
+      height: 42px;
+      fill: currentColor;
+    }
+
+    .foto-pendiente span {
+      font-size: 12px;
+    }
+
+    .producto h3 {
+      color: var(--turquesa-oscuro);
+      font-size: 22px;
+      margin-bottom: 8px;
+    }
+
+    .producto p {
+      font-size: 14px;
+      color: #656b65;
+    }
+
+    .precio-pendiente {
+      color: var(--dorado);
+      margin-top: 12px;
+      font-size: 14px;
+    }
+
+    .aviso-productos {
+      text-align: center;
+      color: #777;
+      font-size: 13px;
+      margin-top: 22px;
+    }
+
+    .contacto {
+      background: #edf5f0;
+      border-top: 1px solid rgba(189, 164, 106, 0.45);
+      border-bottom: 1px solid rgba(189, 164, 106, 0.45);
+    }
+
+    .contacto-contenido {
+      max-width: 760px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .contacto h2 {
+      color: var(--turquesa-oscuro);
+      font-size: 38px;
+      margin-bottom: 12px;
+    }
+
+    .contacto p {
+      color: #59615c;
+      margin-bottom: 25px;
+    }
+
+    .contacto .iconos-contacto {
+      justify-content: center;
+      gap: 18px;
+    }
+
+    .contacto .icono-contacto {
+      width: 53px;
+      height: 53px;
+      background: var(--marfil);
+    }
+
+    .contacto .icono-contacto svg {
+      width: 26px;
+      height: 26px;
+    }
+
+    .texto-iconos {
+      display: flex;
+      justify-content: center;
+      gap: 28px;
+      margin-top: 10px;
+      font-size: 12px;
+      color: var(--turquesa-oscuro);
     }
 
     footer {
-      padding: 22px 15px;
       text-align: center;
-      color: #244d4a;
-      background: var(--turquesa);
-      font-size: 13px;
+      padding: 27px 20px;
+      background: var(--marfil);
+    }
+
+    .pie-marca {
+      color: var(--turquesa-oscuro);
+      font-family: Georgia, "Times New Roman", serif;
+      letter-spacing: 2px;
+      font-size: 18px;
+    }
+
+    .pie-submarca {
+      color: var(--dorado);
+      font-size: 10px;
+      letter-spacing: 3px;
+      margin-bottom: 12px;
+    }
+
+    footer p {
+      color: #777;
+      font-size: 12px;
+    }
+
+    @media (max-width: 900px) {
+      .cabecera {
+        flex-wrap: wrap;
+        padding: 10px 15px;
+        gap: 10px;
+      }
+
+      .marca {
+        flex: 1;
+      }
+
+      .zona-menu {
+        width: 100%;
+        justify-content: space-between;
+        gap: 10px;
+      }
+
+      .menu {
+        gap: 13px;
+        flex-wrap: wrap;
+      }
+
+      .menu a {
+        font-size: 12px;
+      }
+
+      .rejilla-productos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
     }
 
     @media (max-width: 480px) {
-      .brand {
-        letter-spacing: 2px;
+      .logo {
+        width: 48px;
+        height: 48px;
       }
 
-      .tagline {
-        letter-spacing: 2px;
+      .zona-menu {
+        align-items: center;
+      }
+
+      .menu {
+        gap: 10px;
+      }
+
+      .menu a {
+        font-size: 11px;
+      }
+
+      .iconos-contacto {
+        gap: 6px;
+      }
+
+      .icono-contacto {
+        width: 34px;
+        height: 34px;
+      }
+
+      .icono-contacto svg {
+        width: 18px;
+        height: 18px;
       }
 
       .hero {
-        padding: 55px 18px;
+        min-height: 390px;
+        padding: 55px 20px;
+      }
+
+      .hero p {
+        font-size: 15px;
+      }
+
+      .seccion {
+        padding: 55px 17px;
+      }
+
+      .rejilla-productos {
+        grid-template-columns: 1fr;
+      }
+
+      .foto-pendiente {
+        min-height: 200px;
       }
     }
   </style>
 </head>
 
 <body>
-  <header>
-    <img
-      class="logo"
-      src="f63d83a1-ae4c-4a46-b395-017e2b2022e6.jpeg"
-      alt="Logo de BIO L’ESSENCE"
-    >
-    <h1 class="brand">BIO L’ESSENCE</h1>
-    <p class="tagline">HUILES ESSENTIELLES</p>
-  </header>
 
-  <nav>
-    <a href="#inicio">Inicio</a>
-    <a href="#esencia">Nuestra esencia</a>
-    <a href="#aceites">Nuestros aceites</a>
-    <a href="#contacto">Contacto</a>
-  </nav>
+  <header class="barra-superior">
+    <div class="cabecera">
+
+      <a class="marca" href="#inicio" aria-label="BIO L'ESSENCE, inicio">
+        <img
+          class="logo"
+          src="f63d83a1-ae4c-4a46-b395-017e2b2022e6.jpeg"
+          alt="Logo BIO L'ESSENCE"
+        >
+        <span>
+          <span class="nombre-marca">BIO L’ESSENCE</span><br>
+          <span class="submarca">HUILES ESSENTIELLES</span>
+        </span>
+      </a>
+
+      <div class="zona-menu">
+        <nav class="menu" aria-label="Menú principal">
+          <a href="#inicio">Inicio</a>
+          <a href="#esencia">Nuestra esencia</a>
+          <a href="#aceites">Nuestros aceites</a>
+          <a href="#contacto">Contacto</a>
+        </nav>
+
+        <div class="iconos-contacto">
+          <a
+            class="icono-contacto whatsapp"
+            href="https://wa.me/34645527638"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Contactar por WhatsApp"
+            title="WhatsApp"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.6 0 .3 5.3.3 11.8c0 2.1.5 4.1 1.6 5.9L.2 24l6.5-1.7a11.8 11.8 0 0 0 5.4 1.3h.1c6.5 0 11.8-5.3 11.8-11.8 0-3.1-1.2-6.1-3.5-8.3ZM12.1 21.6a9.8 9.8 0 0 1-5-1.4l-.4-.2-3.9 1 1-3.8-.2-.4a9.8 9.8 0 1 1 8.5 4.8Zm5.4-7.3c-.3-.1-1.6-.8-1.9-.9-.3-.1-.5-.1-.7.2-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.2-1.3-.8-.7-1.3-1.6-1.5-1.8-.2-.3 0-.4.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5s-.6-1.4-.9-1.9c-.2-.5-.5-.4-.7-.4h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.3s1 2.7 1.1 2.9c.1.2 2 3.1 4.8 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.6-.7 1.8-1.3.2-.6.2-1.2.2-1.3s-.2-.3-.5-.4Z"/>
+            </svg>
+          </a>
+
+          <a
+            class="icono-contacto"
+            href="mailto:leessenceargerie@gmail.com"
+            aria-label="Enviar correo electrónico"
+            title="Correo electrónico"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M2 4h20a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Zm10 9L3 7v11h18V7Zm0-2 8-5H4Z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </header>
 
   <main>
     <section class="hero" id="inicio">
-      <h2>La esencia de la naturaleza, en cada gota</h2>
-      <p>
-        Descubre el universo de los aceites esenciales y disfruta
-        de una experiencia inspirada en la belleza de la naturaleza.
-      </p>
-      <a class="button" href="#aceites">Descubrir nuestros aceites</a>
-    </section>
-
-    <section id="esencia">
-      <h2>Nuestra esencia</h2>
-      <p class="intro">
-        En BIO L’ESSENCE creemos en la belleza de lo natural.
-        Nuestra identidad combina sencillez, elegancia y respeto
-        por la riqueza aromática de las plantas.
-        Queremos acercarte a un mundo de aromas delicados y
-        experiencias sensoriales.
-      </p>
-    </section>
-
-    <section id="aceites">
-      <h2>Nuestros aceites esenciales</h2>
-      <p class="intro">
-        Explora nuestra colección de aceites esenciales.
-        Próximamente encontrarás aquí nuestros productos.
-      </p>
-
-      <div class="products">
-        <article class="product">
-          <div class="symbol">✧</div>
-          <h3>Esencias naturales</h3>
-          <p>Aromas inspirados en la naturaleza.</p>
-        </article>
-
-        <article class="product">
-          <div class="symbol">❋</div>
-          <h3>La riqueza de las plantas</h3>
-          <p>Descubre el mundo de los aromas naturales.</p>
-        </article>
-
-        <article class="product">
-          <div class="symbol">✿</div>
-          <h3>Tu momento especial</h3>
-          <p>Un universo de aromas para explorar.</p>
-        </article>
+      <div class="hero-contenido">
+        <p class="etiqueta">Nature · Pureté · Essence</p>
+        <h1>La naturaleza en cada gota</h1>
+        <p>
+          Descubre el universo de BIO L’ESSENCE y déjate acompañar
+          por la esencia de la naturaleza.
+        </p>
+        <a class="boton-principal" href="#aceites">
+          Descubre nuestros aceites
+        </a>
       </div>
     </section>
 
-    <section class="contact" id="contacto">
-      <h2>Contacto</h2>
-      <p>¿Quieres conocer más sobre BIO L’ESSENCE?</p>
-      <p>Próximamente encontrarás aquí nuestros datos de contacto.</p>
+    <section class="seccion esencia" id="esencia">
+      <div class="esencia-interior">
+        <p class="etiqueta">Notre philosophie</p>
+        <h2>Nuestra esencia</h2>
+        <div class="linea-dorada"></div>
+        <p>
+          En BIO L’ESSENCE creemos en la belleza de lo natural.
+          Queremos acercarte una selección de aceites y esencias
+          para que descubras sus aromas y encuentres tus favoritos.
+        </p>
+      </div>
+    </section>
+
+    <section class="seccion" id="aceites">
+      <p class="etiqueta" style="text-align:center;">Notre collection</p>
+      <h2 class="titulo-seccion">Nuestros aceites</h2>
+      <div class="linea-dorada"></div>
+      <p class="texto-intro">
+        Explora nuestra colección. Pronto encontrarás aquí las
+        fotografías, los tamaños, las descripciones y los precios
+        de nuestros productos.
+      </p>
+
+      <div class="rejilla-productos">
+
+        <article class="producto">
+          <div class="foto-pendiente">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 2C9 7 4 11 4 16a8 8 0 0 0 16 0c0-5-5-9-8-14Zm0 18a4 4 0 0 1-4-4c0-1.8 1.3-3.7 2.5-5.2-.2 2.2.8 3.1 1.8 3.7 1.2.8 1.7 1.6 1.7 2.7a2 2 0 0 1-2 2.8Z"/>
+            </svg>
+            <span>Fotografía próximamente</span>
+          </div>
+          <h3>Próximamente</h3>
+          <p>Estamos preparando los detalles de este producto.</p>
+          <div class="precio-pendiente">Precio por definir</div>
+        </article>
+
+        <article class="producto">
+          <div class="foto-pendiente">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 22c-4 0-7-3-7-7 0-5 7-13 7-13s7 8 7 13c0 4-3 7-7 7Zm0-3a4 4 0 0 0 4-4c0-1.5-1-3.5-2.5-5.5.3 2.5-.8 3.5-2 4.2-1 .7-1.5 1.5-1.5 2.5a2.5 2.5 0 0 0 2 2.8Z"/>
+            </svg>
+            <span>Fotografía próximamente</span>
+          </div>
+          <h3>Próximamente</h3>
+          <p>Descubre pronto otro producto de nuestra colección.</p>
+          <div class="precio-pendiente">Precio por definir</div>
+        </article>
+
+        <article class="producto">
+          <div class="foto-pendiente">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 2 9 7H6v4c-2 2-3 4-3 6a9 9 0 0 0 18 0c0-2-1-4-3-6V7h-3Zm-3 8h6v2c2 1.5 3 3 3 5a6 6 0 0 1-12 0c0-2 1-3.5 3-5Z"/>
+            </svg>
+            <span>Fotografía próximamente</span>
+          </div>
+          <h3>Próximamente</h3>
+          <p>Muy pronto podrás conocer todos los detalles.</p>
+          <div class="precio-pendiente">Precio por definir</div>
+        </article>
+
+      </div>
+
+      <p class="aviso-productos">
+        Colección en preparación. Los productos y sus precios se añadirán próximamente.
+      </p>
+    </section>
+
+    <section class="seccion contacto" id="contacto">
+      <div class="contacto-contenido">
+        <p class="etiqueta">Nous contacter</p>
+        <h2>Estamos aquí para ti</h2>
+        <div class="linea-dorada"></div>
+        <p>
+          ¿Tienes alguna pregunta? Escríbenos y estaremos encantados
+          de atenderte.
+        </p>
+
+        <div class="iconos-contacto">
+          <a
+            class="icono-contacto whatsapp"
+            href="https://wa.me/34645527638"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Contactar por WhatsApp"
+            title="WhatsApp"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.6 0 .3 5.3.3 11.8c0 2.1.5 4.1 1.6 5.9L.2 24l6.5-1.7a11.8 11.8 0 0 0 5.4 1.3h.1c6.5 0 11.8-5.3 11.8-11.8 0-3.1-1.2-6.1-3.5-8.3ZM12.1 21.6a9.8 9.8 0 0 1-5-1.4l-.4-.2-3.9 1 1-3.8-.2-.4a9.8 9.8 0 1 1 8.5 4.8Zm5.4-7.3c-.3-.1-1.6-.8-1.9-.9-.3-.1-.5-.1-.7.2-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.2-1.3-.8-.7-1.3-1.6-1.5-1.8-.2-.3 0-.4.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5s-.6-1.4-.9-1.9c-.2-.5-.5-.4-.7-.4h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.3s1 2.7 1.1 2.9c.1.2 2 3.1 4.8 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.6-.7 1.8-1.3.2-.6.2-1.2.2-1.3s-.2-.3-.5-.4Z"/>
+            </svg>
+          </a>
+
+          <a
+            class="icono-contacto"
+            href="mailto:leessenceargerie@gmail.com"
+            aria-label="Enviar correo electrónico"
+            title="Correo electrónico"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M2 4h20a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Zm10 9L3 7v11h18V7Zm0-2 8-5H4Z"/>
+            </svg>
+          </a>
+        </div>
+
+        <div class="texto-iconos">
+          <span>WhatsApp</span>
+          <span>Correo electrónico</span>
+        </div>
+      </div>
     </section>
   </main>
 
   <footer>
-    © 2026 BIO L’ESSENCE · HUILES ESSENTIELLES
+    <div class="pie-marca">BIO L’ESSENCE</div>
+    <div class="pie-submarca">HUILES ESSENTIELLES</div>
+    <p>© 2026 BIO L’ESSENCE. Todos los derechos reservados.</p>
   </footer>
+
 </body>
 </html>
