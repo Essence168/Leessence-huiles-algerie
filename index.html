@@ -1,0 +1,425 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="L’ESSENCE — HUILES D’ALGÉRIE. Descubre nuestra selección de aceites naturales inspirados en Argelia.">
+  <meta name="theme-color" content="#075f60">
+  <title>L’ESSENCE — HUILES D’ALGÉRIE</title>
+
+  <style>
+    :root {
+      --turquesa: #168f8b;
+      --turquesa-oscuro: #075f60;
+      --marfil: #fcfaf4;
+      --dorado: #bda46a;
+      --texto: #353b38;
+      --blanco: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--marfil);
+      color: var(--texto);
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.7;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .aviso {
+      background: var(--turquesa-oscuro);
+      color: var(--blanco);
+      padding: 9px 12px;
+      text-align: center;
+      font: 11px Arial, sans-serif;
+      letter-spacing: 2px;
+    }
+
+    header {
+      padding: 25px 16px 22px;
+      text-align: center;
+      border-bottom: 1px solid var(--dorado);
+    }
+
+    .logo {
+      display: block;
+      width: min(100%, 340px);
+      max-height: 230px;
+      object-fit: contain;
+      margin: 0 auto 12px;
+    }
+
+    .nombre-marca {
+      color: var(--turquesa-oscuro);
+      font-size: clamp(30px, 6vw, 46px);
+      font-weight: normal;
+      letter-spacing: 7px;
+      line-height: 1.3;
+    }
+
+    .subtitulo-marca {
+      margin-top: 8px;
+      color: var(--dorado);
+      font: 11px Arial, sans-serif;
+      letter-spacing: 5px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px 25px;
+      padding: 17px 10px;
+      font: 11px Arial, sans-serif;
+      letter-spacing: 1px;
+    }
+
+    nav a {
+      color: var(--turquesa-oscuro);
+    }
+
+    nav a:hover {
+      color: var(--turquesa);
+    }
+
+    .portada {
+      background: var(--turquesa-oscuro);
+      color: var(--blanco);
+      text-align: center;
+      padding: 90px 22px;
+    }
+
+    .etiqueta {
+      color: var(--dorado);
+      font: 11px Arial, sans-serif;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      max-width: 760px;
+      margin: 24px auto;
+      font-size: clamp(36px, 7vw, 60px);
+      font-weight: normal;
+      line-height: 1.2;
+    }
+
+    .portada p {
+      max-width: 600px;
+      margin: 0 auto;
+      font-size: 17px;
+    }
+
+    .boton {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 12px 25px;
+      border: 1px solid var(--dorado);
+      color: var(--blanco);
+      font: 11px Arial, sans-serif;
+      letter-spacing: 2px;
+    }
+
+    .boton:hover {
+      background: rgba(255, 255, 255, 0.12);
+    }
+
+    section {
+      padding: 70px 22px;
+      text-align: center;
+    }
+
+    .contenedor {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .etiqueta-seccion {
+      color: var(--turquesa);
+      font: 11px Arial, sans-serif;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      margin: 16px 0 22px;
+      color: var(--turquesa-oscuro);
+      font-size: clamp(29px, 5vw, 42px);
+      font-weight: normal;
+      line-height: 1.3;
+    }
+
+    .linea-dorada {
+      width: 55px;
+      height: 1px;
+      margin: 22px auto;
+      background: var(--dorado);
+    }
+
+    .introduccion {
+      max-width: 720px;
+      margin: 0 auto;
+      font-size: 17px;
+    }
+
+    .historia {
+      background: #f1ecdf;
+    }
+
+    .historia p {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .productos {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+      margin-top: 36px;
+    }
+
+    .producto {
+      padding: 28px 18px;
+      border: 1px solid #e0d3b6;
+      background: rgba(255, 255, 255, 0.45);
+    }
+
+    .numero {
+      color: var(--dorado);
+      font-size: 30px;
+    }
+
+    h3 {
+      margin: 12px 0;
+      color: var(--turquesa-oscuro);
+      font-size: 21px;
+      font-weight: normal;
+    }
+
+    .producto p {
+      font-size: 14px;
+    }
+
+    .disponibilidad {
+      display: block;
+      margin-top: 16px;
+      color: var(--turquesa);
+      font: 10px Arial, sans-serif;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .contacto {
+      background: var(--turquesa-oscuro);
+      color: var(--blanco);
+    }
+
+    .contacto h2 {
+      color: var(--blanco);
+    }
+
+    .contacto .etiqueta-seccion {
+      color: var(--dorado);
+    }
+
+    .contacto p {
+      max-width: 620px;
+      margin: 0 auto;
+    }
+
+    footer {
+      padding: 25px 15px;
+      border-top: 1px solid var(--dorado);
+      text-align: center;
+      font: 11px Arial, sans-serif;
+      letter-spacing: 1px;
+    }
+
+    footer strong {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--turquesa-oscuro);
+      font: 20px Georgia, serif;
+      letter-spacing: 4px;
+    }
+
+    @media (max-width: 650px) {
+      .portada {
+        padding: 65px 20px;
+      }
+
+      section {
+        padding: 52px 20px;
+      }
+
+      .productos {
+        grid-template-columns: 1fr;
+      }
+
+      .subtitulo-marca {
+        letter-spacing: 3px;
+      }
+
+      nav {
+        gap: 12px 18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="aviso">LA ESENCIA NATURAL DE ARGELIA</div>
+
+  <header>
+    <img
+      class="logo"
+      src="667f53a6-9938-4c03-ba45-d70cae8f0169.jpeg"
+      alt="Logo original de L’ESSENCE — HUILES D’ALGÉRIE"
+    >
+
+    <div class="nombre-marca">L’ESSENCE</div>
+    <div class="subtitulo-marca">HUILES D’ALGÉRIE</div>
+  </header>
+
+  <nav aria-label="Navegación principal">
+    <a href="#inicio">INICIO</a>
+    <a href="#esencia">NUESTRA ESENCIA</a>
+    <a href="#aceites">NUESTROS ACEITES</a>
+    <a href="#contacto">CONTACTO</a>
+  </nav>
+
+  <main>
+    <section class="portada" id="inicio">
+      <div class="etiqueta">Inspirada en Argelia</div>
+
+      <h1>La belleza en su esencia más pura.</h1>
+
+      <p>
+        Descubre L’ESSENCE, un universo de aceites naturales
+        inspirado en la riqueza de Argelia, sus tradiciones
+        y su autenticidad.
+      </p>
+
+      <a class="boton" href="#aceites">DESCUBRE NUESTRA COLECCIÓN</a>
+    </section>
+
+    <section id="esencia">
+      <div class="contenedor">
+        <div class="etiqueta-seccion">Nuestra filosofía</div>
+
+        <h2>Un origen, una historia, una esencia.</h2>
+
+        <div class="linea-dorada"></div>
+
+        <p class="introduccion">
+          L’ESSENCE — HUILES D’ALGÉRIE celebra la belleza de
+          lo natural, la elegancia y las tradiciones argelinas.
+          Queremos acercarte a una selección de aceites que
+          refleje la autenticidad y la riqueza de su origen.
+        </p>
+      </div>
+    </section>
+
+    <section class="historia">
+      <div class="contenedor">
+        <div class="etiqueta-seccion">Inspiración argelina</div>
+
+        <h2>La naturaleza en el corazón de nuestra historia.</h2>
+
+        <div class="linea-dorada"></div>
+
+        <p>
+          Desde los paisajes del Magreb hasta la riqueza de
+          sus tradiciones, nuestro universo se inspira en la
+          sencillez, la autenticidad y el cuidado de los detalles.
+          Cada aceite tendrá su propia presentación con información
+          sobre su origen, sus características y su uso.
+        </p>
+      </div>
+    </section>
+
+    <section id="aceites">
+      <div class="contenedor">
+        <div class="etiqueta-seccion">Nuestra colección</div>
+
+        <h2>Nuestros aceites</h2>
+
+        <div class="linea-dorada"></div>
+
+        <p class="introduccion">
+          Estamos preparando la presentación de nuestra colección.
+          Muy pronto podrás conocer los aceites disponibles y
+          consultar los detalles de cada producto.
+        </p>
+
+        <div class="productos">
+          <article class="producto">
+            <div class="numero">I</div>
+            <h3>Aceite natural</h3>
+            <p>
+              Próximamente encontrarás aquí su origen,
+              sus características y su presentación.
+            </p>
+            <span class="disponibilidad">Próximamente</span>
+          </article>
+
+          <article class="producto">
+            <div class="numero">II</div>
+            <h3>Aceite de belleza</h3>
+            <p>
+              Un espacio dedicado a uno de los productos
+              de nuestra colección.
+            </p>
+            <span class="disponibilidad">Próximamente</span>
+          </article>
+
+          <article class="producto">
+            <div class="numero">III</div>
+            <h3>Nuestra selección</h3>
+            <p>
+              Añadiremos los detalles cuando confirmemos
+              la información de cada aceite.
+            </p>
+            <span class="disponibilidad">Próximamente</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="contacto" id="contacto">
+      <div class="contenedor">
+        <div class="etiqueta-seccion">Estamos aquí para ti</div>
+
+        <h2>Bienvenida a nuestro universo.</h2>
+
+        <div class="linea-dorada"></div>
+
+        <p>
+          ¿Quieres conocer mejor L’ESSENCE — HUILES D’ALGÉRIE?
+          Próximamente añadiremos aquí nuestros datos de contacto
+          y redes sociales para que puedas escribirnos.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <strong>L’ESSENCE</strong>
+    <p>HUILES D’ALGÉRIE</p>
+    <p>© L’ESSENCE — HUILES D’ALGÉRIE</p>
+  </footer>
+</body>
+</html>
